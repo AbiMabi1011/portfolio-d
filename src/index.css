@@ -2640,18 +2640,35 @@ button:focus-visible {
   pointer-events: none;
 }
 
-/* Responsive Stacking for Mobile */
+/* Responsive Stacking for Mobile Timeline */
 @media (max-width: 900px) {
   .edu-infographic-container {
     height: auto;
     display: flex;
     flex-direction: column;
     gap: 28px;
-    padding: 20px 10px;
+    padding: 16px 4px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .edu-infographic-container::before {
+    content: "";
+    position: absolute;
+    left: 28px;
+    top: 28px;
+    bottom: 28px;
+    width: 3px;
+    background: linear-gradient(180deg, #10B981 0%, #34D399 50%, #0A66C2 100%);
+    border-radius: 3px;
+    z-index: 1;
+    opacity: 0.6;
   }
 
   .edu-pipeline-svg {
-    display: none;
+    display: none !important;
   }
 
   .info-step {
@@ -2659,27 +2676,131 @@ button:focus-visible {
     left: auto !important;
     top: auto !important;
     transform: none !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    z-index: 2 !important;
   }
 
-  .callout-box {
+  .node-halo {
+    width: 56px !important;
+    height: 56px !important;
+    min-width: 56px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 3 !important;
+    margin-top: 4px !important;
+    box-sizing: border-box !important;
+  }
+
+  .node-circle {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .node-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .callout-box,
+  .pos-step-upside,
+  .pos-step-downside {
     position: relative !important;
     left: auto !important;
     right: auto !important;
     top: auto !important;
     bottom: auto !important;
+    transform: none !important;
     width: 100% !important;
-    margin-top: 12px;
+    max-width: calc(100% - 72px) !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .callout-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 16px 18px !important;
+    border-radius: 14px !important;
   }
 
   .infographic-footer-tag {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    text-align: center;
-    margin-top: 20px;
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .edu-infographic-container {
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .edu-infographic-container::before {
+    left: 21px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+  }
+
+  .info-step {
+    gap: 12px !important;
+  }
+
+  .node-halo {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    margin-top: 2px !important;
+  }
+
+  .node-circle {
+    width: 32px !important;
+    height: 32px !important;
+    border-width: 2px !important;
+  }
+
+  .node-icon svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .callout-box,
+  .pos-step-upside,
+  .pos-step-downside {
+    max-width: calc(100% - 56px) !important;
+  }
+
+  .callout-card {
+    padding: 14px 14px !important;
+    border-radius: 12px !important;
+  }
+
+  .callout-title {
+    font-size: 0.98rem !important;
+  }
+
+  .callout-inst {
+    font-size: 0.76rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .callout-desc {
+    font-size: 0.78rem !important;
+    margin-bottom: 10px !important;
+    line-height: 1.4 !important;
+  }
+
+  .current-floating-tag {
+    font-size: 0.55rem !important;
+    padding: 2px 7px !important;
+    top: -10px !important;
+    right: 12px !important;
   }
 }
 
