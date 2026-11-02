@@ -580,6 +580,18 @@ section {
   border-top: 1px solid var(--line);
 }
 
+@media (max-width: 768px) {
+  section {
+    padding: 42px 0;
+  }
+  #about {
+    padding-bottom: 22px;
+  }
+  #skills {
+    padding-top: 24px;
+  }
+}
+
 .sec-head {
   display: flex;
   justify-content: space-between;
@@ -587,6 +599,13 @@ section {
   margin-bottom: 42px;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .sec-head {
+    margin-bottom: 24px;
+    gap: 12px;
+  }
 }
 
 .sec-label {
@@ -1197,6 +1216,8 @@ section {
 @media (max-width:600px) {
   .about-highlights {
     grid-template-columns: 1fr;
+    margin-top: 20px;
+    gap: 10px;
   }
 }
 
@@ -1748,6 +1769,25 @@ button:focus-visible {
   margin-top: 36px;
   padding-top: 24px;
   border-top: 1px dashed var(--line);
+}
+
+@media (max-width: 768px) {
+  .about-reels-section {
+    margin-top: 20px;
+    padding-top: 16px;
+  }
+  .reels-head {
+    margin-bottom: 14px;
+    gap: 8px;
+  }
+  .reels-rings-row {
+    gap: 14px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+  }
+  .reels-grid {
+    gap: 14px;
+  }
 }
 
 .reels-head {

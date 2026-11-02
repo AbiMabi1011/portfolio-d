@@ -330,7 +330,7 @@ export default function App() {
           </div>
 
           {/* ---------- INSTAGRAM STORY HIGHLIGHT RINGS & REEL CARDS ---------- */}
-          <div className="about-reels-section reveal" style={{ marginTop: '36px' }}>
+          <div className="about-reels-section reveal">
             <div className="reels-head">
               <div>
                 <span className="skill-cat-label">Moments &amp; Highlights</span>
