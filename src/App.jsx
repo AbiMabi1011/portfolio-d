@@ -5,10 +5,8 @@ import daniImg from './images/dani.jpeg';
 // Import all 18 About gallery images from your 4 category folders: Work, Academics, Assignments, CSR
 import imgWork1 from './images/about img/Work/IMG-20260811-WA0004.jpg';
 
-import imgAcad1 from './images/about img/Academics/IMG-20260811-WA0009.jpg';
 import imgAcad2 from './images/about img/Academics/IMG-20260811-WA0010.jpg';
 import imgAcad3 from './images/about img/Academics/IMG-20260811-WA0011.jpg';
-import imgAcad4 from './images/about img/Academics/IMG-20260811-WA0012.jpg';
 import imgAcad5 from './images/about img/Academics/IMG-20260811-WA0013.jpg';
 import imgAcad6 from './images/about img/Academics/IMG-20260811-WA0014.jpg';
 import imgAcad7 from './images/about img/Academics/IMG-20260811-WA0021.jpg';
@@ -42,26 +40,24 @@ export default function App() {
     setExpandedPosts(prev => ({ ...prev, [id]: !prev[id] }));
   };
 
-  // Organized 18 photos matching your 4 folders: Work, Academics, Assignments, CSR
+  // Organized 16 photos matching your 3 categories: Work, Academics & Assignments, CSR
   const allGalleryImages = [
-    { id: 1, src: imgWork1, title: "BBK Partnership Internship & Financial Analysis", tag: "Work", category: "Work" },
-    { id: 2, src: imgAcad1, title: "SLIIT Business Analytics Coursework", tag: "Academics", category: "Academics" },
-    { id: 3, src: imgAcad2, title: "Data Visualization & Query Project", tag: "Academics", category: "Academics" },
-    { id: 4, src: imgAcad3, title: "University Hackathon & Analytics Study", tag: "Academics", category: "Academics" },
-    { id: 5, src: imgAcad4, title: "Diploma in English & IT Graduation", tag: "Academics", category: "Academics" },
-    { id: 6, src: imgAcad5, title: "Academic Research Presentation", tag: "Academics", category: "Academics" },
-    { id: 7, src: imgAcad6, title: "Power BI Case Study Session", tag: "Academics", category: "Academics" },
-    { id: 8, src: imgAcad7, title: "SQL Database Queries & Reporting", tag: "Academics", category: "Academics" },
-    { id: 9, src: imgAcad8, title: "Field Research & Data Collection in Jaffna", tag: "Academics", category: "Academics" },
-    { id: 10, src: imgAcad9, title: "A/L Stream Selection Academic Study", tag: "Academics", category: "Academics" },
-    { id: 11, src: imgAssign1, title: "University Business Assignment & Group Work", tag: "Assignments", category: "Assignments" },
-    { id: 12, src: imgAssign2, title: "Academic Project Modeling & Case Analysis", tag: "Assignments", category: "Assignments" },
-    { id: 13, src: imgAssign3, title: "Collaborative Study Session & Problem Solving", tag: "Assignments", category: "Assignments" },
-    { id: 14, src: imgCsr1, title: "Special Needs School Educational Workshop", tag: "CSR", category: "CSR" },
-    { id: 15, src: imgCsr2, title: "Community Welfare & Activity Facilitation", tag: "CSR", category: "CSR" },
-    { id: 16, src: imgCsr3, title: "Healthcare CSR & Hospital Engagement", tag: "CSR", category: "CSR" },
-    { id: 17, src: imgCsr4, title: "Sivapoomi School Volunteering Program", tag: "CSR", category: "CSR" },
-    { id: 18, src: imgCsr5, title: "Student Community CSR Team Project", tag: "CSR", category: "CSR" },
+    { id: 1, src: imgWork1, title: "Analytics & Dashboard Workstation", tag: "Work", category: "Work" },
+    { id: 2, src: imgAcad2, title: "Semester Guidance for Juniors — Peer Mentoring & Study Advice", tag: "Academics & Assignments", category: "Academics & Assignments" },
+    { id: 3, src: imgAcad3, title: "Junior Workshop Presentation — Succeeding in Group Assignments", tag: "Academics & Assignments", category: "Academics & Assignments" },
+    { id: 4, src: imgAcad5, title: "Junior Guidance Workshop — Cohort Group Photo", tag: "Academics & Assignments", category: "Academics & Assignments" },
+    { id: 5, src: imgAcad6, title: "IM2713 Digital Innovation Keells Supermarket Presentation", tag: "Academics & Assignments", category: "Academics & Assignments" },
+    { id: 6, src: imgAcad7, title: "Career Day Workshop by BBK Innovative at Northern Uni", tag: "Academics & Assignments", category: "Academics & Assignments" },
+    { id: 7, src: imgAcad8, title: "Academic Project Group with University Lecturer", tag: "Academics & Assignments", category: "Academics & Assignments" },
+    { id: 8, src: imgAcad9, title: "University Food Festival Organized for Academic Module", tag: "Academics & Assignments", category: "Academics & Assignments" },
+    { id: 9, src: imgAssign1, title: "Field Study Visit to Keells Supermarket", tag: "Academics & Assignments", category: "Academics & Assignments" },
+    { id: 10, src: imgAssign2, title: "Stakeholder Discussion & Review at Craftary Kopay", tag: "Academics & Assignments", category: "Academics & Assignments" },
+    { id: 11, src: imgAssign3, title: "Field Project Team at Craftary Kopay", tag: "Academics & Assignments", category: "Academics & Assignments" },
+    { id: 12, src: imgCsr1, title: "One-on-One Engagement at Kondavil Sivapoomi Special School", tag: "CSR", category: "CSR" },
+    { id: 13, src: imgCsr2, title: "Art & Drawing Workshop Showcase with Sivapoomi Students", tag: "CSR", category: "CSR" },
+    { id: 14, src: imgCsr3, title: "Kondavil Sivapoomi Special School Visit with the Principal", tag: "CSR", category: "CSR" },
+    { id: 15, src: imgCsr4, title: "School Beautification & Painting at J/Senguntha Hindu College", tag: "CSR", category: "CSR" },
+    { id: 16, src: imgCsr5, title: "Sivapoomi Special School Community Event at Devakanthan Hall", tag: "CSR", category: "CSR" },
   ];
 
   const filteredImages = activeTab === 'All' 
@@ -340,15 +336,14 @@ export default function App() {
                 <span className="skill-cat-label">Moments &amp; Highlights</span>
                 <h3 className="story-deck-title">Visual Story Highlights</h3>
               </div>
-              <span className="mono gallery-count">18 Photos • Tap ring or card</span>
+              <span className="mono gallery-count">{allGalleryImages.length} Photos • Tap ring or card</span>
             </div>
 
             {/* Circular Category Highlight Rings */}
             <div className="reels-rings-row">
               {[
                 { name: 'Work', label: 'Work', count: allGalleryImages.filter(i => i.category === 'Work').length, cover: allGalleryImages.find(i => i.category === 'Work')?.src },
-                { name: 'Academics', label: 'Academics', count: allGalleryImages.filter(i => i.category === 'Academics').length, cover: allGalleryImages.find(i => i.category === 'Academics')?.src },
-                { name: 'Assignments', label: 'Assignments', count: allGalleryImages.filter(i => i.category === 'Assignments').length, cover: allGalleryImages.find(i => i.category === 'Assignments')?.src },
+                { name: 'Academics & Assignments', label: 'Academics & Assignments', count: allGalleryImages.filter(i => i.category === 'Academics & Assignments').length, cover: allGalleryImages.find(i => i.category === 'Academics & Assignments')?.src },
                 { name: 'CSR', label: 'CSR Projects', count: allGalleryImages.filter(i => i.category === 'CSR').length, cover: allGalleryImages.find(i => i.category === 'CSR')?.src },
               ].map((category) => (
                 <div
@@ -367,7 +362,7 @@ export default function App() {
               ))}
               {activeTab !== 'All' && (
                 <button className="reel-reset-btn" onClick={() => setActiveTab('All')}>
-                  Show All (18)
+                  Show All ({allGalleryImages.length})
                 </button>
               )}
             </div>
@@ -569,7 +564,7 @@ export default function App() {
               <span className="sec-label">03 — Applied work</span>
               <h2 className="sec-title">Projects &amp; case studies</h2>
             </div>
-            <p className="sec-note">Key business analysis specifications, system design documentation, and web application developments.</p>
+            <p className="sec-note">Key business analysis specifications, functional requirements documentation, and IT system workflow mappings.</p>
           </div>
 
           <div className="proj-grid reveal">
@@ -621,9 +616,9 @@ export default function App() {
               <div>
                 <div className="proj-top">
                   <div className="proj-tags">
-                    <span className="proj-tag">Corporate Website</span>
-                    <span className="proj-tag">Cloud &amp; IT Services</span>
-                    <span className="proj-tag">Frontend</span>
+                    <span className="proj-tag">Business Analysis</span>
+                    <span className="proj-tag">IT Solutions</span>
+                    <span className="proj-tag">Requirements Spec</span>
                   </div>
                   <span className="proj-num">02</span>
                 </div>
@@ -631,7 +626,7 @@ export default function App() {
                   Bright Brain — IT Infrastructure &amp; Cloud Solutions
                 </h3>
                 <p className="proj-desc" style={{ color: 'var(--ink-soft)', lineHeight: 1.55, marginBottom: '16px', fontSize: '0.9rem' }}>
-                  Designed and developed a professional corporate website showcasing cloud, server virtualization, cybersecurity, networking, hosting, backup, and managed IT services for enterprise clients.
+                  Conducted business analysis and requirements elicitation for enterprise IT services. Analyzed client service needs and mapped functional specifications for cloud infrastructure, virtualization, cybersecurity, disaster recovery, networking, and managed IT services.
                 </p>
               </div>
 
@@ -639,21 +634,21 @@ export default function App() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', background: 'rgba(255, 255, 255, 0.03)', padding: '10px 12px', borderRadius: '6px', border: '1px solid var(--line)', marginBottom: '14px' }}>
                   <div>
                     <span style={{ display: 'block', fontSize: '0.7rem', textTransform: 'uppercase', color: 'var(--ink-soft)', letterSpacing: '0.05em' }}>Role</span>
-                    <strong style={{ fontSize: '0.85rem', color: 'var(--accent)' }}>Web Developer</strong>
+                    <strong style={{ fontSize: '0.85rem', color: 'var(--accent)' }}>Business Analyst</strong>
                   </div>
                   <div>
                     <span style={{ display: 'block', fontSize: '0.7rem', textTransform: 'uppercase', color: 'var(--ink-soft)', letterSpacing: '0.05em' }}>Focus</span>
-                    <strong style={{ fontSize: '0.85rem', color: 'var(--ink)' }}>Responsive UI</strong>
+                    <strong style={{ fontSize: '0.85rem', color: 'var(--ink)' }}>Requirements &amp; Workflow</strong>
                   </div>
                 </div>
 
                 <div>
                   <span style={{ display: 'block', fontSize: '0.72rem', fontWeight: 600, color: 'var(--ink-soft)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Key Skills &amp; Tools:</span>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                    <span style={{ background: 'var(--card-bg)', border: '1px solid var(--line)', padding: '3px 8px', borderRadius: '14px', fontSize: '0.75rem', color: 'var(--ink)' }}>HTML</span>
-                    <span style={{ background: 'var(--card-bg)', border: '1px solid var(--line)', padding: '3px 8px', borderRadius: '14px', fontSize: '0.75rem', color: 'var(--ink)' }}>CSS</span>
-                    <span style={{ background: 'var(--card-bg)', border: '1px solid var(--line)', padding: '3px 8px', borderRadius: '14px', fontSize: '0.75rem', color: 'var(--ink)' }}>JavaScript</span>
-                    <span style={{ background: 'var(--card-bg)', border: '1px solid var(--line)', padding: '3px 8px', borderRadius: '14px', fontSize: '0.75rem', color: 'var(--ink)' }}>Netlify</span>
+                    <span style={{ background: 'var(--card-bg)', border: '1px solid var(--line)', padding: '3px 8px', borderRadius: '14px', fontSize: '0.75rem', color: 'var(--ink)' }}>Requirements Elicitation</span>
+                    <span style={{ background: 'var(--card-bg)', border: '1px solid var(--line)', padding: '3px 8px', borderRadius: '14px', fontSize: '0.75rem', color: 'var(--ink)' }}>Service Workflow Mapping</span>
+                    <span style={{ background: 'var(--card-bg)', border: '1px solid var(--line)', padding: '3px 8px', borderRadius: '14px', fontSize: '0.75rem', color: 'var(--ink)' }}>Stakeholder Analysis</span>
+                    <span style={{ background: 'var(--card-bg)', border: '1px solid var(--line)', padding: '3px 8px', borderRadius: '14px', fontSize: '0.75rem', color: 'var(--ink)' }}>Functional Specifications</span>
                   </div>
                 </div>
               </div>
